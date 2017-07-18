@@ -1,4 +1,4 @@
-#N canvas 27 45 509 426 10;
+#N canvas 47 39 509 426 10;
 #X obj 81 42 adc~;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array \$0-cq 50 float 0;
@@ -10,7 +10,6 @@
 #X text 325 125 80 Hz to 10 kHz;
 #X text 326 111 50 CQ-bands from;
 #X obj 168 166 rmstodb;
-#X obj 83 97 spect_scaled 4096 4 log 80 10000 50;
 #X text 326 72 FFT length 4096;
 #N canvas 0 22 450 300 list-map 0;
 #X obj 49 41 inlet;
@@ -65,9 +64,10 @@
 #X restore 83 166 pd list-map;
 #X text 224 166 dB-scaled magnitudes;
 #X text 89 123 list of constant-Q power bins;
-#X connect 0 0 8 0;
-#X connect 0 1 8 0;
-#X connect 7 0 10 1;
-#X connect 8 0 10 0;
-#X connect 10 0 2 0;
-#X connect 10 1 7 0;
+#X obj 83 97 spect_scaled 4096 4 log 80 10000 50;
+#X connect 0 0 12 0;
+#X connect 0 1 12 0;
+#X connect 7 0 9 1;
+#X connect 9 0 2 0;
+#X connect 9 1 7 0;
+#X connect 12 0 9 0;
