@@ -1,4 +1,4 @@
-#N canvas 47 39 509 426 10;
+#N canvas 50 40 509 426 10;
 #X obj 81 42 adc~;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array \$0-cq 50 float 0;
